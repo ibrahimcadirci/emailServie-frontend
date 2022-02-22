@@ -12,11 +12,15 @@ $(document).ready(function(){
         let data        = form.serialize();
         $.post(apiUrl + "/api/send",data, function(ret){
             if(ret){
+                $("#mailForm").prepend(`
+                    <div class="form-general-messages alert alert-success" role="alert">
+                    ${ret.message}
+                </div>`)
                 form[0].reset();
             }
         },"JSON") .fail(function(err) {
             $("#mailForm").prepend(`
-            <div class="form-general-errors alert alert-danger" role="alert">
+            <div class="form-general-messages alert alert-danger" role="alert">
             ${err.responseJSON.message}
           </div>`)
             $.each(err.responseJSON.errors, function(key, value){
@@ -26,8 +30,8 @@ $(document).ready(function(){
             });
         });
         setTimeout(function(){
-            $(".form-general-errors ").hide(250);
-        },2500)
+            $(".form-general-messages ").hide(250);
+        },5000)
     });
 
     $("form input").keyup(function(){
