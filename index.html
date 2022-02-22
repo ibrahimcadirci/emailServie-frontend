@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Gönder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="col-12 col-md-7  mail-send">
+            <h2>Mail Gönder</h2>
+           
+            <form  id="mailForm">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Mail adresi</label>
+                  <input type="email" required name="mailTo"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@domain.com">
+                    <span class="text-danger input-error"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInput1" class="form-label">Başlık</label>
+                    <input type="text" required name="subject"  class="form-control" id="exampleInput1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputContent" class="form-label">İçerik</label>
+                    <textarea name="message"   id="exampleInputContent" ></textarea>
+                </div>
+                <button class="btn btn-primary">Gönder</button>
+            </form>
+            
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha512-AFwxAkWdvxRd9qhYYp1qbeRZj6/iTNmJ2GFwcxsMOzwwTaRwz2a/2TX225Ebcj3whXte1WGQb38cXE5j7ZQw3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.bundle.min.js" integrity="sha512-mULnawDVcCnsk9a4aG1QLZZ6rcce/jSzEGqUkeOLy0b6q0+T6syHrxlsAGH7ZVoqC93Pd0lBqd6WguPWih7VHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
